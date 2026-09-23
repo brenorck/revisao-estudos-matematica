@@ -1,0 +1,437 @@
+/* ========================================
+   GEOMETRIA ANALÍTICA — SESI
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0066ff;
+    --primary-dark: #004dcc;
+    --secondary: #00c896;
+    --background: #f4f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+    --success: #16a34a;
+    --error: #dc2626;
+    --warning: #f59e0b;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ========================================
+   CABEÇALHO
+   ======================================== */
+
+header {
+    background: linear-gradient(135deg, var(--primary), #00a8ff);
+    color: white;
+    padding: 30px 20px;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* ========================================
+   CONTAINER
+   ======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* ========================================
+   BOTÃO VOLTAR
+   ======================================== */
+
+.btn-voltar {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.btn-voltar:hover {
+    color: var(--primary-dark);
+    transform: translateX(-3px);
+}
+
+/* ========================================
+   PROGRESSO
+   ======================================== */
+
+.progress-container {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* ========================================
+   CARDS DE CONTEÚDO
+   ======================================== */
+
+.card {
+    background: var(--card);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.card h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+/* ========================================
+   LISTAS
+   ======================================== */
+
+.card ul,
+.card ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.card li {
+    margin-bottom: 7px;
+}
+
+/* ========================================
+   FÓRMULAS
+   ======================================== */
+
+.formula {
+    background: #eef5ff;
+    border-left: 5px solid var(--primary);
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #174ea6;
+    overflow-x: auto;
+}
+
+/* ========================================
+   EXEMPLO RESOLVIDO
+   ======================================== */
+
+.exemplo {
+    background: #f0fdf4;
+    border-left: 5px solid var(--success);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.exemplo h3 {
+    color: var(--success);
+    margin-top: 0;
+}
+
+/* ========================================
+   TÓPICOS
+   ======================================== */
+
+.topicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.topico {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.topico:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+.topico h3 {
+    color: var(--primary);
+    margin: 0 0 8px;
+}
+
+/* ========================================
+   QUIZ
+   ======================================== */
+
+.quiz {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    margin-top: 25px;
+}
+
+.quiz h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.questao {
+    margin-bottom: 30px;
+}
+
+.questao p {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alternativa {
+    border: 2px solid var(--border);
+    background: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.alternativa:hover {
+    border-color: var(--primary);
+    background: #f0f6ff;
+}
+
+.alternativa.correta {
+    border-color: var(--success);
+    background: #dcfce7;
+    color: #166534;
+}
+
+.alternativa.errada {
+    border-color: var(--error);
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ========================================
+   BOTÕES
+   ======================================== */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: var(--success);
+}
+
+.btn-success:hover {
+    background: #15803d;
+}
+
+/* ========================================
+   CHECKLIST
+   ======================================== */
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.check-item input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.check-item label {
+    cursor: pointer;
+}
+
+/* ========================================
+   RESULTADO DO QUIZ
+   ======================================== */
+
+.resultado {
+    display: none;
+    text-align: center;
+    background: #eef5ff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.resultado h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.nota {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    text-align: center;
+    background: #111827;
+    color: white;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .card,
+    .quiz {
+        padding: 18px;
+    }
+
+    .topicos {
+        grid-template-columns: 1fr;
+    }
+
+    .formula {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   ACESSIBILIDADE
+   ======================================== */
+
+:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
